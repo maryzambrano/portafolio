@@ -188,11 +188,18 @@ footer {
   border-radius: 3px;
 }
 
-.badge-grid {
+/*.badge-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
+}*/
+
+.badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .badge-card {
@@ -204,11 +211,15 @@ footer {
   color: #333;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.2s ease;
+  max-width: 300px;
+  width: 100%;
 }
 
 .badge-card img {
-  width: 200px;
+  width: 100%;
+  height: auto;
   margin-bottom: 0.6rem;
+  display: block;
 }
 
 
@@ -219,4 +230,25 @@ footer {
 
 .badge-card:hover {
   transform: translateY(-4px);
+}
+
+.project-links a {
+  margin-right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #2563eb;
 }
